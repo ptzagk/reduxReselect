@@ -12,6 +12,8 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/static/'
   },
+  debug: true,
+  devtool: 'source-map',
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin()

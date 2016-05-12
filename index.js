@@ -2,11 +2,11 @@ import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './containers/App'
-import configureStore from './store/configureStore'
-import 'todomvc-app-css/index.css'
+import { createStore } from 'redux'
+import todoApp from './reducers'
+import App from './components/App'
 
-const store = configureStore()
+let store = createStore(todoApp, window.devToolsExtension ? window.devToolsExtension() : undefined)
 
 render(
   <Provider store={store}>
